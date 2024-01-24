@@ -1,0 +1,2 @@
+var chave;
+chave = "nome";
