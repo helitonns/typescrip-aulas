@@ -2,7 +2,7 @@ import moedaParaNumero from "./moedaParaNumero.js";
 import stringToDate from "./stringToDate.js";
 
 declare global {
-  type TransacvaoPagamento = "Boleto" | "Cartão de Crédito";
+  type TransacaoPagamento = "Boleto" | "Cartão de Crédito";
   type TransacaoStatus =
     | "Paga"
     | "Recusada pela operadora de cartão"
@@ -17,7 +17,7 @@ declare global {
     Email: string;
     ["Valor (R$)"]: string;
     ["Cliente Novo"]: number;
-    ["Forma de Pagamento"]: TransacvaoPagamento;
+    ["Forma de Pagamento"]: TransacaoPagamento;
   }
 
   interface Transacao {
@@ -28,7 +28,7 @@ declare global {
     email: string;
     moeda: string;
     valor: number | null;
-    pagamento: TransacvaoPagamento;
+    pagamento: TransacaoPagamento;
     novo: boolean;
   }
 
